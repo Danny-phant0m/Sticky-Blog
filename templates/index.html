@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Blog</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+    <header class="container">
+        <h1>Sticky Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#">Log In</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Welcome to Sticky Blog</h2>
+            <p>A captivating description of your blog's purpose and what kind of content you offer. Highlight what makes your blog unique and interesting for readers.</p>
+            <a href="#" class="hero-button">Start Reading</a>
+        </section>
+
+        <section class="latest-posts">
+            <h3>Latest Posts</h3>
+            </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
