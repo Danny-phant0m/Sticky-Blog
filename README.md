@@ -1,3 +1,3 @@
 To start 
 
-Run python app.py 
+Run `python app.py `
