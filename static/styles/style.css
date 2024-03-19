@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #EDD757;
+    background-image: url("../images/wood-board-background.jpg");
+    background-size: cover;
 }
 
 header {
@@ -60,3 +62,29 @@ footer {
     padding: 10px;
     background-color: #5B5200;
 }
+.sticky-note {
+    background-color: #ffffcc;
+    border: 1px solid #fdf5e6;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px; /* Add rounded corners for a softer look */
+    cursor: grab; /* Change cursor to indicate grabbing on hover */
+  }
+  
+  .sticky-note:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .sticky-note h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .sticky-note p {
+    margin-top: 5px;
+    line-height: 1.5;
+  }
+  
