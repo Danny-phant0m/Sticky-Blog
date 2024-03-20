@@ -4,24 +4,59 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
     border-radius: 5px; /* Add rounded corners for a softer look */
     position: relative; /* Needed for pseudo-element positioning */
     height: 212px;
     width: 320px;
-  }
-  
-  .sticky-note:hover {
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.sticky-note:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-  }
-  
-  .sticky-note h2 {
+}
+
+.sticky-note h2 {
     margin-top: 0;
     font-size: 18px;
-    color: #333;
-  }
-  
-  .sticky-note p {
+}
+
+.sticky-note p {
     margin-top: 5px;
     line-height: 1.5;
+}
+
+.sticky-note button {
+    background-color: #EDD757;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top:5px;
+    right: 60px;
+    margin: 5px;
+}
+
+.sticky-note button:hover {
+    background-color: #AD6000;
+}
+
+.sticky-note .second-button {
+    /* Same styles as the first button, adjust as needed */
+    background-color: #EDD757;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 0px; /* Place it right next to the first button */
+    margin: 5px;
   }
+
+  .sticky-note .second-button:hover {
+    background-color: #AD6000;
+}  

@@ -65,11 +65,18 @@ main {
     padding: 20px;
 }
 
-footer {
+.footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px 0; /* Adjust padding as needed */
     background-color: #5B5200;
-}
+    color: #fff; /* Light text color for better contrast */
+  }
+  
+  .container {
+    max-width: 800px; /* Optional: Set a maximum width for centered content */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
 .hero {
     /* Styles for the hero section */
     background-color: #EDD757; /* Light blue background */
@@ -116,6 +123,8 @@ footer {
     font-size: 1.5em;
     margin-bottom: 15px;
   }
+
+  
   
 
   

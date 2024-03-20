@@ -1,43 +1,51 @@
 class StickyNote extends HTMLElement {
     constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this._data = { header: '', paragraph: '' };
-        this.render();
+      super();
+      this._data = { header: '', paragraph: '' };
+      this.render();
     }
-
-    // Define a static method to observe attribute changes
+  
     static get observedAttributes() {
-        return ['data'];//notified when data changes
+      return ['data'];
     }
-
-    // Called when an observed attribute has been added, removed, updated, or replaced.
+  
     attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'data' && oldValue !== newValue) {
-            this._data = JSON.parse(newValue);
-            this.render();
-        }
+      if (name === 'data' && oldValue !== newValue) {
+        this._data = JSON.parse(newValue);
+        this.render();
+      }
     }
-
-    // Render method to update the component when data changes
+  
     render() {
-        
-        const wrapper = document.createElement('div');
-        //wrapper.classList.add('sticky-note');
+      this.innerHTML = ''; // Clear previous content
+  
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('sticky-note');
+  
+      const heading = document.createElement('h2');
+      heading.textContent = this._data.header;
+      heading.classList.add('h2');
+  
+      const paragraph = document.createElement('p');
+      paragraph.textContent = this._data.paragraph;
+      paragraph.classList.add('p');
+  
+      const editButton = document.createElement('button');
+      editButton.textContent = 'edit';
+      editButton.classList.add('button');
 
-        const heading = document.createElement('h2');
-        heading.textContent = this._data.header;
-
-        const paragraph = document.createElement('p');
-        paragraph.textContent = this._data.paragraph;
-
-        wrapper.appendChild(heading);
-        wrapper.appendChild(paragraph);
-
-        this.shadowRoot.innerHTML = ''; // Clear previous content
-        this.shadowRoot.appendChild(wrapper);
+      const deletebutton = document.createElement('button');
+      deletebutton.textContent = 'delete';
+      deletebutton.classList.add('second-button');
+  
+      wrapper.appendChild(heading);
+      wrapper.appendChild(paragraph);
+      wrapper.appendChild(editButton);
+      wrapper.appendChild(deletebutton);
+  
+      this.appendChild(wrapper);
     }
-}
-
-// Register the StickyNote component using the tag name <sticky-note>.
-customElements.define('sticky-note', StickyNote);
+  }
+  
+  customElements.define('sticky-note', StickyNote);
+  

@@ -40,14 +40,16 @@
 
         <section class="latest-posts">
             <h3>Latest Posts</h3>
-            <sticky-note class = "sticky-note" data='{"header": "Groceries", "paragraph": "Bread, Milk, Eggs"}'></sticky-note>
-            <sticky-note class = "sticky-note" data='{"header": "Thing to do", "paragraph": "Eat sleep repeat"}'></sticky-note>
+            <sticky-note data='{"header": "Groceries", "paragraph": "Bread, Milk, Eggs"}'></sticky-note>
+            <sticky-note data='{"header": "Thing to do", "paragraph": "Eat sleep repeat"}'></sticky-note>
+            <sticky-note data='{"header": "Computer Science", "paragraph": "Todays lecture is about tree data strcutures"}'></sticky-note>
+            <sticky-note data='{"header": "How to make money", "paragraph": "Relax and wait do not chase it 24/7. Gotta make sure you are ready for it "}'></sticky-note>
         </section>
     </main>
 
-    <footer class="container">
+    <footer class="footer">
         <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
-    </footer>
+      </footer>      
     <script src="{{ url_for('static', filename='js/sticky-note.js') }}"></script>
 </body>
 </html>
