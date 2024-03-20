@@ -40,14 +40,22 @@ nav a {
     display: flex;
 }
 
-.auth-buttons a {
+.auth-buttons a:nth-child(2) {
+    /* Styles for the second button (Sign Up) */
+    background-color: #AD6000; /* Green color */
+    color: #fff; /* White text color */
+  }
+  
+  .auth-buttons a {
+    /* Default styles for both buttons (optional) */
     margin-left: 10px;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-decoration: none;
-    color: #000;
-}
+    color: #000; /* Black text color by default */
+  }
+  
 
 .auth-buttons a:hover {
     background-color: #ddd;
@@ -62,15 +70,58 @@ footer {
     padding: 10px;
     background-color: #5B5200;
 }
+.hero {
+    /* Styles for the hero section */
+    background-color: #EDD757; /* Light blue background */
+    padding: 30px;
+    text-align: center; /* Center the content within the hero section */
+  }
+  
+  .hero h2 {
+    /* Styles for the hero section heading */
+    font-size: 2em; /* Set a larger font size for the heading */
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    /* Styles for the hero section description */
+    font-size: 1.2em; /* Set a medium font size for the description */
+    line-height: 1.5; /* Increase line spacing for readability */
+  }
+  
+  .latest-posts {
+    /* Styles for the latest posts section */
+    margin-top: 30px; /* Add some space between the hero and latest posts sections */
+  }
+  
+  .latest-posts h3 {
+    /* Styles for the latest posts heading */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
 .sticky-note {
-    background-color: #ffffcc;
+    background-color: #FFFFFF;
     border: 1px solid #fdf5e6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     display: inline-block;
     margin: 10px;
     border-radius: 5px; /* Add rounded corners for a softer look */
-    cursor: grab; /* Change cursor to indicate grabbing on hover */
+    position: relative; /* Needed for pseudo-element positioning */
+    height: 212px;
+    width: 320px;
+  }
+
+  .sticky-note:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: inherit; /* Inherit background color from sticky note */
+    z-index: -1; /* Place the element behind the sticky note content */
   }
   
   .sticky-note:hover {
