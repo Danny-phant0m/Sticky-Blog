@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sticky Blog</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/sticky-note.css') }}">
 </head>
 <body>
     <header class="container">
@@ -32,24 +33,21 @@
                 
                 What makes Sticky Blog truly unique is its vibrant and diverse content. Here, you'll find everything from colorful office memos to heartfelt love letters, from hilarious jokes to thought-provoking messages. It's a melting pot of ideas, emotions, and expressions, where each sticky note tells a story and sparks a conversation.
                 
-                Whether you're looking for a dose of inspiration, a laugh, or just a glimpse into the lives of others, Sticky Blog has something for everyone. So join us, browse through the virtual sticky notes, and get ready to be inspired, entertained, and maybe even surprised by what you find!</p>
+                Whether you're looking for a dose of inspiration, a laugh, or just a glimpse into the lives of others, Sticky Blog has something for everyone. So join us, browse through the virtual sticky notes, and get ready to be inspired, entertained, and maybe even surprised by what you find!
+            </p>
+            <a href="#" class="get-started-btn">Get Started for free</a>
         </section>
 
         <section class="latest-posts">
             <h3>Latest Posts</h3>
-            <div class="sticky-note">
-                <h2>Groceries</h2>
-                <p>Bread, Milk, Eggs</p>
-            </div>
-            <div class="sticky-note">
-                <h2>Thing to do</h2>
-                <p>Eat sleep repeat</p>
-            </div>
-            </section>
+            <sticky-note class = "sticky-note" data='{"header": "Groceries", "paragraph": "Bread, Milk, Eggs"}'></sticky-note>
+            <sticky-note class = "sticky-note" data='{"header": "Thing to do", "paragraph": "Eat sleep repeat"}'></sticky-note>
+        </section>
     </main>
 
     <footer class="container">
         <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
     </footer>
+    <script src="{{ url_for('static', filename='js/sticky-note.js') }}"></script>
 </body>
 </html>

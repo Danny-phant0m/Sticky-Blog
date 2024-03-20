@@ -42,7 +42,7 @@ nav a {
 
 .auth-buttons a:nth-child(2) {
     /* Styles for the second button (Sign Up) */
-    background-color: #AD6000; /* Green color */
+    background-color: #EDD757; /* Green color */
     color: #fff; /* White text color */
   }
   
@@ -58,7 +58,7 @@ nav a {
   
 
 .auth-buttons a:hover {
-    background-color: #ddd;
+    background-color: #AD6000;
 }
 
 main {
@@ -88,6 +88,23 @@ footer {
     font-size: 1.2em; /* Set a medium font size for the description */
     line-height: 1.5; /* Increase line spacing for readability */
   }
+
+  .get-started-btn {
+    background-color: #000; /* Green color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Add some padding to the button */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to indicate clicking on hover */
+    font-weight: bold; /* Make the text bolder */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Make the button display as a block element */
+    margin-top: 20px; /* Add some space above the button */
+  }
+
+  .get-started-btn:hover {
+    background-color: #AD6000;
+  }
   
   .latest-posts {
     /* Styles for the latest posts section */
@@ -100,42 +117,5 @@ footer {
     margin-bottom: 15px;
   }
   
-.sticky-note {
-    background-color: #FFFFFF;
-    border: 1px solid #fdf5e6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    display: inline-block;
-    margin: 10px;
-    border-radius: 5px; /* Add rounded corners for a softer look */
-    position: relative; /* Needed for pseudo-element positioning */
-    height: 212px;
-    width: 320px;
-  }
 
-  .sticky-note:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background-color: inherit; /* Inherit background color from sticky note */
-    z-index: -1; /* Place the element behind the sticky note content */
-  }
-  
-  .sticky-note:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-  }
-  
-  .sticky-note h2 {
-    margin-top: 0;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .sticky-note p {
-    margin-top: 5px;
-    line-height: 1.5;
-  }
   
