@@ -4,7 +4,7 @@ let result = document.querySelector('#match')
 
 function checkPassword () {
     if (pass1.value && pass2.value) {
-        result.innerText = pass1.value == pass2.value ? null : "Oops! It looks like the passwords you entered don't match. Please try again.";
+        result.innerText = pass1.value == pass2.value ? null : "Passwords don't match.";
       } else {
         result.innerText = null
       }
