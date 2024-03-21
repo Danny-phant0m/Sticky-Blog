@@ -24,7 +24,7 @@
     <main>
         <div class="form">
             <h2>Sign Up</h2>
-            <form action="/signup" method="post">
+            <form method="post">
               <div class="input-field">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required>
@@ -38,7 +38,7 @@
                 <input type="password" name="confirm_password" id="confirm_password" required>
                 <label id="match"></label>
               </div>
-              <button class="button" type="submit">Sign Up</button>
+              <button class="button" type="submit" value="submit" id="send" disabled>Sign Up</button>
             </form>
           </div>          
     </main>

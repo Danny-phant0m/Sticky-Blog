@@ -25,6 +25,7 @@ def signUp():
             cursor.execute("INSERT INTO users (email,password) VALUES (?,?)", 
                 (email,password)) 
             users.commit() 
+            print(f"User '{email}' '{password}' saved to database!")
         return render_template("index.html") 
     else:
       return render_template("signup.html")
