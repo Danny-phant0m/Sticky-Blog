@@ -19,7 +19,7 @@
     </nav>
     <div class="auth-buttons">
       {% if logged_in %}
-        <a href="#">Sign Out</a>
+      <a href="#" id="signOutButton">Sign Out</a>
       {% else %}
           <a href="{{ url_for('login') }}">Log In</a>
           <a href="{{ url_for('signUp') }}">Sign Up</a>

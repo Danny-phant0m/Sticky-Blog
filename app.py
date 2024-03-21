@@ -77,6 +77,12 @@ def contact():
   logged_in = session.get('logged_in', False)  # Check if the user is logged in
   return render_template("contact.html", logged_in=logged_in)
 
+@app.route("/logout", methods=['GET', 'POST'])
+def logout():
+  # Invalidate user session
+  session.clear()
+  return render_template("home.html")
+
 if __name__ == "__main__":
   app.run(debug=True)
 

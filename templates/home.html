@@ -18,7 +18,7 @@
       </ul>
     </nav>
     <div class="auth-buttons">
-      <a href="#" onclick="logOut()">Sign Out</a>
+        <a href="#" id="signOutButton">Sign Out</a>
     </div>
   </header>
   <main>
@@ -29,11 +29,6 @@
   <footer class="footer">
     <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
   </footer>
-  <script>
-    function logOut() {
-        localStorage.setItem('isLoggedIn', false);
-        window.location.href = '/home';
-    }
-  </script>
+  <script src="{{ url_for('static', filename='js/sign-out.js') }}"></script> 
 </body>
 </html>
