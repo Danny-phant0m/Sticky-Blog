@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/contact-page.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+  <header class="container">
+    <h1>Sticky Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+        <a href="{{ url_for('login') }}">Log In</a>
+        <a href="{{ url_for('signUp') }}">Sign Up</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Contact Information</h2>
+      <p>Feel free to reach out to us using the following methods:</p>
+      <ul class="contact-info-list">
+        <div>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@stickyblog.com">info@stickyblog.com</a>
+        </div>
+        <div>
+          <i class="fas fa-phone"></i>
+          +27 10 1111 0000
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          123 Main Street, Kingsway, Johannesburg 12345
+        </div>
+      </ul>      
+    </section>
+
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="/contact" method="post"> 
+        <div class="input-field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="input-field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

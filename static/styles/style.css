@@ -95,6 +95,7 @@ main {
     /* Styles for the hero section description */
     font-size: 1.2em; /* Set a medium font size for the description */
     line-height: 1.5; /* Increase line spacing for readability */
+    text-align: center;
   }
 
   .get-started-btn {

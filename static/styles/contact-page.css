@@ -1,0 +1,78 @@
+/* Add styles for contact-info and contact-form sections here */
+
+.contact-form {
+    background-color: #EDD757; /* Light blue background */
+    padding: 30px;
+    text-align: center; /* Center the content within the hero section */
+  }
+
+  .contact-form h2 {
+    /* Styles for the hero section heading */
+    font-size: 2em; /* Set a larger font size for the heading */
+    margin-bottom: 10px;
+  }
+  
+  .contact-form p {
+    /* Styles for the hero section description */
+    font-size: 1.2em; /* Set a medium font size for the description */
+    line-height: 1.5; /* Increase line spacing for readability */
+    text-align: center;
+  }
+  
+  .contact-form .input-field {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  
+  .contact-form .input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .contact-form .input-field input,
+  .contact-form .input-field textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+   .contact-form button {
+    background-color: #BAA826;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #AD6000;
+  }
+
+  .contact-info-list {
+    display: flex; /* Make the list itself a flex container */
+    flex-direction: column; /* Stack content vertically */
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .contact-info-list div {
+    display: flex; /* Make each inner div a flex container */
+    align-items: center; /* Vertically center content within each div */
+    margin-bottom: 10px; /* Optional spacing between items */
+    margin: 0 auto;
+  }
+  
+  .contact-info-list div i {
+    margin-right: 10px; /* Add spacing between icon and text */
+  }
+   
