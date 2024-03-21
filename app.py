@@ -79,7 +79,7 @@ def contact():
 
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():
-  # Invalidate user session
+  # Invalidate user session basically log them out from the backend
   session.clear()
   return render_template("home.html")
 

@@ -50,7 +50,7 @@
 
     <section class="contact-form">
       <h2>Send Us a Message</h2>
-      <form action="/contact" method="post"> 
+      <form id="contact-form"> 
         <div class="input-field">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" required>
@@ -71,5 +71,12 @@
   <footer class="footer">
     <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
   </footer>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("We have recived your message thank you! :)");
+        window.location.href = "contact";
+    });
+</script>
 </body>
 </html>
