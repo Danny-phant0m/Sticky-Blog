@@ -1,21 +1,56 @@
-.create-button-container {
-    text-align: center; /* Center the button horizontally */
-    margin-top: 50px; /* Add some space from the top */
-  }
-  
-  .create-button {
-    display: inline-block; /* Allow for padding and margins */
-    padding: 15px 30px; /* Add padding around the text */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 18px; /* Increase font size for emphasis */
-    text-decoration: none; /* Remove underline from link */
-    color: #fff; /* Text color white */
-    background-color: #EDD757; /* Blue background color */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  }
-  
-  .create-button:hover {
-    background-color: #AD6000; /* Change background color on hover */
-  }
-  
+.create-board-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #fdf5e6;
+  border-radius: 5px;
+  max-width: 500px; 
+  background-color: #EDD757;
+}
+
+.create-board-container h2 {
+  margin-bottom: 1rem;
+}
+
+.create-board-container p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.create-board-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-board-container label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.create-board-container input[type="text"],
+.create-board-container textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures content fits within border */
+}
+
+.create-board-container textarea {
+  min-height: 100px;
+}
+
+.create-board-container button[type="submit"] {
+  background-color: #BAA826; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.create-board-container button[type="submit"]:hover {
+  background-color: #AD6000; 
+}
