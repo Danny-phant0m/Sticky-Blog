@@ -19,9 +19,13 @@
       </ul>
     </nav>
     <div class="auth-buttons">
-        <a href="{{ url_for('login') }}">Log In</a>
-        <a href="{{ url_for('signUp') }}">Sign Up</a>
-    </div>
+      {% if logged_in %}
+        <a href="#">Sign Out</a>
+      {% else %}
+          <a href="{{ url_for('login') }}">Log In</a>
+          <a href="{{ url_for('signUp') }}">Sign Up</a>
+      {% endif %}
+  </div> 
   </header>
 
   <main>

@@ -11,6 +11,11 @@ function checkPassword () {
         result.innerText = null
       }
 }
+function setLoginState() {
+    localStorage.setItem('isLoggedIn', true);
+}
+
+submit.addEventListener('click', setLoginState);
 
 pass1.addEventListener ('keyup', () => {
     if(pass2.value.length != 0) checkPassword();
