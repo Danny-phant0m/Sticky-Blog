@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for, flash
 import sqlite3
 import secrets
 
@@ -24,20 +24,29 @@ def login():
 
 @app.route("/SignUp", methods=['GET', 'POST'])
 def signUp():
-    if request.method == 'POST': 
+     if request.method == 'POST':
         email = request.form['email'] 
         password = request.form['password'] 
-  
+
         with sqlite3.connect("database.db") as users: 
             cursor = users.cursor() 
-            cursor.execute("INSERT INTO users (email,password) VALUES (?,?)", 
-                (email,password)) 
-            users.commit() 
-            session['logged_in'] = True
-            print(f"User '{email}' '{password}' saved to database!")
-        return render_template("home.html") 
-    else:
-      return render_template("signup.html")
+            
+            # Check if the email already exists in the database
+            cursor.execute("SELECT * FROM users WHERE email=?", (email,))
+            existing_user = cursor.fetchone()
+
+            if existing_user:
+                flash('User already exists. Please log in.')
+                return redirect(url_for('login'))  # Redirect to the login page
+            else:
+                cursor.execute("INSERT INTO users (email,password) VALUES (?,?)", 
+                    (email,password)) 
+                users.commit() 
+                session['logged_in'] = True
+                flash('Successfully signed up!')
+                return redirect(url_for('home'))  # Redirect to the home page after signup
+     else:
+        return render_template("signup.html")
 
 @app.route("/about")
 def about():
