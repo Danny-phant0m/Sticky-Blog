@@ -36,12 +36,14 @@
                 <input type="checkbox" id="remember-me">
                 <label for="remember-me">Remember Me</label>
               </div>
-              <button class="button" type="submit">Login</button>
+              <button class="button" type="submit" value="submit">Login</button>
             </form>
+            {% if error %}
+              <p style="color: red;">{{ error }}</p>
+            {% endif %}
             <a href="#" class="forgot-password">Forgot Password?</a>
-          </div>
+        </div>
     </main>
-
     <footer class="footer">
         <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
     </footer>   

@@ -1,0 +1,21 @@
+.create-button-container {
+    text-align: center; /* Center the button horizontally */
+    margin-top: 50px; /* Add some space from the top */
+  }
+  
+  .create-button {
+    display: inline-block; /* Allow for padding and margins */
+    padding: 15px 30px; /* Add padding around the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px; /* Increase font size for emphasis */
+    text-decoration: none; /* Remove underline from link */
+    color: #fff; /* Text color white */
+    background-color: #EDD757; /* Blue background color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .create-button:hover {
+    background-color: #AD6000; /* Change background color on hover */
+  }
+  

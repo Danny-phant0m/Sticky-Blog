@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sticky Blog</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/create-blog.css') }}">
 </head>
 <body>
   <header class="container">
@@ -17,7 +18,7 @@
       </ul>
     </nav>
     <div class="auth-buttons">
-      <a href="#">Sign Out</a>
+      <a href="#" onclick="logOut()">Sign Out</a>
     </div>
   </header>
   <main>
@@ -28,5 +29,11 @@
   <footer class="footer">
     <p>&copy; <?php echo date("Y"); ?> Sticky Blog. All Rights Reserved.</p>
   </footer>
+  <script>
+    function logOut() {
+        localStorage.setItem('isLoggedIn', false);
+        window.location.href = '/home';
+    }
+  </script>
 </body>
 </html>
