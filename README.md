@@ -1,7 +1,28 @@
-To start 
+#Sticky Blog Website
 
-Run `python app.py `
+A simple web application that allows users to create, view, and manage sticky notes for quick thoughts, reminders, and ideas.
 
-Then go to your browser and type `http://127.0.0.1:5000/`
+Getting Started
+To start the application:
+python app.py
+Open your browser and navigate to:
+http://127.0.0.1:5000/
+If that doesn't work, check the console for the running address.
 
-If that does not work when you run the first command vs code should tell you where it is running on
+Features
+Create Sticky Notes: Users can create notes for quick thoughts.
+View Sticky Notes: All notes are displayed on the main page.
+
+User Authentication: Users can sign up and log in to manage their notes.
+
+Persistent Storage: Notes are saved in a SQLite database for easy access.
+
+Technologies Used
+Python
+Flask
+SQLite
+
+Code Overview
+The app uses Flask for the web framework and SQLite for storing user credentials and sticky notes. It includes routes for user registration, login, and displaying sticky notes.
+
+
